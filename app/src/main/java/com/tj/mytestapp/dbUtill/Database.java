@@ -107,25 +107,26 @@ public class Database extends SQLiteOpenHelper {
     }
 
     // Get all users from the database
-    public List<Users> getAllUsers() {
-        List<Users> userList = new ArrayList<>();
+    public ArrayList<Users> getAllUsers() {
+        ArrayList<Users> userList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query("USERS", null, null, null, null, null, null);
+//        Cursor cursor = db.query("USERS", null, null, null, null, null, null);
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery("select * from USERS ", null);
 
         if (cursor != null) {
             while (cursor.moveToNext()) {
-                @SuppressLint("Range")
                 Users user = new Users(
-                        cursor.getInt(cursor.getColumnIndex("id")),
-                        cursor.getString(cursor.getColumnIndex("name")),
-                        cursor.getString(cursor.getColumnIndex("email")),
-                        cursor.getString(cursor.getColumnIndex("PASS")),
-                        cursor.getString(cursor.getColumnIndex("DOB"))
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4)
                 );
                 userList.add(user);
             }
             cursor.close();
         }
+
         return userList;
     }
 
