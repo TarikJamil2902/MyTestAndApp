@@ -81,7 +81,7 @@
        </RadioGroup>
 
     <Button
-        android:id="@+id/signup_button"
+        android:id="@+id/onno_namtoo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up" />
@@ -94,7 +94,7 @@
         android:textColor="@android:color/darker_gray" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/onno_nam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Go to Login" />

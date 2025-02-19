@@ -7,10 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,8 +33,8 @@ public class SignUp extends AppCompatActivity {
         password = findViewById(R.id.password_signup);
         dob = findViewById(R.id.dob_signup);
 
-        signupButton = findViewById(R.id.signup_button);
-        loginButton = findViewById(R.id.login_button);
+        signupButton = findViewById(R.id.onno_namtoo);
+        loginButton = findViewById(R.id.onno_nam);
 //        radioGroup.clearCheck();
 
         dob.setOnClickListener(v -> {

@@ -1,8 +1,10 @@
 package com.tj.mytestapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,7 +21,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
-
+private Button signupButton;
+private Button loginButton;
     ArrayList<Users> dataArrayList = new ArrayList<>();
     UserAdapter listAdapter;
     Users listData;
@@ -52,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
 //                intent.putExtra("image", imageList[i]);
 //                startActivity(intent);
             }
+        });
+        signupButton = findViewById(R.id.onno_namtoo);
+        loginButton = findViewById(R.id.onno_nam);
+
+        loginButton.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, Login.class));
+
+        });
+        signupButton.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, SignUp.class));
+
         });
     }
 }

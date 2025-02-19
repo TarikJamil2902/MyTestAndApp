@@ -15,17 +15,17 @@
         android:textColor="#D51F1F"
         android:textSize="25sp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/onno_nam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.008" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/onno_namtoo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Sign Up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.109"
@@ -34,10 +34,10 @@
         app:layout_constraintVertical_bias="0.067" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/onno_nam"
         android:layout_width="92dp"
         android:layout_height="53dp"
-        android:text="Button"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.886"
